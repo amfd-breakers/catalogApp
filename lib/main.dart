@@ -6,6 +6,8 @@ import 'package:catalog_app/theme/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/utils/my_routes.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -17,15 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: HomeView(),
-      themeMode: _themeController.themeMode,
-      // themeMode: ThemeMode.dark,
+      home: const LoginView(),
+      themeMode: ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
-      // initialRoute: "/homeView",
       routes: {
-        "/login": (context) => const LoginView(),
-        "/homeView": (context) => const HomeView()
+        MyRoutes.loginRout: (context) => const LoginView(),
+        MyRoutes.homeRout: (context) => const HomeView()
       },
     );
   }

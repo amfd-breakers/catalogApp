@@ -1,3 +1,4 @@
+import 'package:catalog_app/core/auth/login_view.dart';
 import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:catalog_app/theme/light_theme.dart';
 import 'package:catalog_app/theme/theme_controller.dart';
@@ -16,6 +17,12 @@ class HomeView extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                 actions: [
+                  IconButton(
+                    onPressed: () {
+                      Get.to(() => const LoginView());
+                    },
+                    icon: Icon(Icons.back_hand),
+                  ),
                   Obx(() {
                     return Switch(
                       value: controller.switchOn.value,
