@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: const LoginView(),
+      home: const HomeView(),
       themeMode: ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,

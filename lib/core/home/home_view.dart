@@ -1,4 +1,5 @@
 import 'package:catalog_app/core/auth/login_view.dart';
+import 'package:catalog_app/core/widgets/my_drawar.dart';
 import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:catalog_app/theme/light_theme.dart';
 import 'package:catalog_app/theme/theme_controller.dart';
@@ -16,30 +17,17 @@ class HomeView extends StatelessWidget {
           return SafeArea(
             child: Scaffold(
               appBar: AppBar(
-                actions: [
-                  IconButton(
-                    onPressed: () {
-                      Get.to(() => const LoginView());
-                    },
-                    icon: Icon(Icons.back_hand),
-                  ),
-                  Obx(() {
-                    return Switch(
-                      value: controller.switchOn.value,
-                      onChanged: ((newValue) {
-                        controller.switchOn.value =
-                            controller.changeTheme(newValue);
-                      }),
-                    );
-                  })
-                ],
-                title: const Center(
+                title: Center(
                   child: Text(
                     "Catalog App",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(color: Colors.white),
                   ),
                 ),
               ),
-              drawer: const Drawer(),
+              drawer: const MyDrawar(),
               body: const Center(
                   child: Text(
                 "Welcome in 30 days of flutter",
