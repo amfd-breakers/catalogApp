@@ -33,73 +33,81 @@ class LoginView extends StatelessWidget {
                         textAlign: TextAlign.center,
                       );
                     }),
-                    Column(
-                      children: [
-                        TextFormField(
-                          decoration: const InputDecoration(
-                            hintText: " name",
-                            label: Text(
-                              "Enter name",
-                            ),
-                          ),
-                          onChanged: (value) {
-                            controller.name.value = value;
-                          },
-                        ),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        TextFormField(
-                          decoration: const InputDecoration(
-                            label: Text(
-                              "name",
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        ),
-
-                        Obx(() {
-                          return InkWell(
-                            onTap: () async {
-                              controller.changedButton.value = true;
-                              await Future.delayed(const Duration(seconds: 1));
-                              Get.toNamed(MyRoutes.homeRout);
+                    Form(
+                      key: controller.loginFormValidator,
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return " name is required";
+                              }
                             },
-                            child: AnimatedContainer(
-                              duration: const Duration(seconds: 1),
-                              height: 50,
-                              width: controller.changedButton.value ? 50 : 150,
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurple,
-                                  borderRadius: BorderRadius.circular(
-                                      controller.changedButton.value ? 50 : 8)),
-                              alignment: Alignment.center,
-                              child: controller.changedButton.value
-                                  ? const Icon(
-                                      Icons.done,
-                                      color: Colors.white,
-                                    )
-                                  : Text(
-                                      "Login",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(color: backgroundColor),
-                                    ),
+                            controller: controller.nameController,
+                            decoration: const InputDecoration(
+                              hintText: " name",
+                              label: Text(
+                                "Enter name",
+                              ),
                             ),
-                          );
-                        })
-                        // ElevatedButton(
-                        //   onPressed: () {
-                        //     Get.toNamed(MyRoutes.homeRout);
-                        //   },
-                        //   child: const Text(
-                        //     "Login",
-                        //   ),
-                        // ),
-                      ],
+                            onChanged: (value) {
+                              controller.name.value = value;
+                            },
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          TextFormField(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "password is required";
+                              }
+                              if (value.length < 6) {
+                                return "Password should be atleast 6 characters";
+                              }
+                            },
+                            decoration: const InputDecoration(
+                              hintText: "Password",
+                              label: Text(
+                                "Enter Password",
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 50,
+                          ),
+                          Obx(() {
+                            return Material(
+                              color: Colors.deepPurple,
+                              borderRadius: BorderRadius.circular(
+                                  controller.changedButton.value ? 50 : 8),
+                              child: InkWell(
+                                onTap: controller.goToHomeView,
+                                child: AnimatedContainer(
+                                  duration: const Duration(seconds: 1),
+                                  height: 50,
+                                  width:
+                                      controller.changedButton.value ? 50 : 150,
+                                  alignment: Alignment.center,
+                                  child: controller.changedButton.value
+                                      ? const Icon(
+                                          Icons.done,
+                                          color: Colors.white,
+                                        )
+                                      : Text(
+                                          "Login",
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                  color: backgroundColor),
+                                        ),
+                                ),
+                              ),
+                            );
+                          })
+                        ],
+                      ),
                     ),
                   ],
                 ),
