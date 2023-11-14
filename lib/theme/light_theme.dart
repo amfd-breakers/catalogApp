@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Color primaryColor = Colors.deepPurple;
-Color backgroundColor = Colors.white;
+Color scafoldColor = Colors.white;
 Color textColor = Colors.black;
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   fontFamily: GoogleFonts.lato().fontFamily,
   appBarTheme: AppBarTheme(
-    color: primaryColor,
-    toolbarHeight: 90,
+    iconTheme: IconThemeData(color: textColor),
+    color: scafoldColor,
+    elevation: 0.0,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      foregroundColor: backgroundColor,
+      foregroundColor: scafoldColor,
       backgroundColor: primaryColor,
       padding: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(

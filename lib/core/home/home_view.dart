@@ -1,8 +1,5 @@
-import 'package:catalog_app/core/auth/login_view.dart';
+import 'package:catalog_app/core/home/home_view_controller.dart';
 import 'package:catalog_app/core/widgets/my_drawar.dart';
-import 'package:catalog_app/theme/dark_theme.dart';
-import 'package:catalog_app/theme/light_theme.dart';
-import 'package:catalog_app/theme/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,8 +8,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ThemeController>(
-        init: ThemeController(),
+    return GetBuilder<HomeViewController>(
+        init: HomeViewController(),
         builder: (controller) {
           return SafeArea(
             child: Scaffold(
@@ -20,18 +17,17 @@ class HomeView extends StatelessWidget {
                 title: Center(
                   child: Text(
                     "Catalog App",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(color: Colors.white),
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
               drawer: const MyDrawar(),
               body: const Center(
-                  child: Text(
-                "Welcome in 30 days of flutter",
-              )),
+                child: Text(
+                  "Welcome in 30 days of flutter",
+                ),
+              ),
             ),
           );
         });

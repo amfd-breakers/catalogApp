@@ -8,8 +8,8 @@ ThemeData darkTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     elevation: 0,
     toolbarHeight: 60,
-    //   color: primaryColor,
   ),
+
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.black,

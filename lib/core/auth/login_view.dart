@@ -99,8 +99,7 @@ class LoginView extends StatelessWidget {
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodyMedium
-                                              ?.copyWith(
-                                                  color: backgroundColor),
+                                              ?.copyWith(color: scafoldColor),
                                         ),
                                 ),
                               ),
