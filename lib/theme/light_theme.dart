@@ -33,6 +33,11 @@ ThemeData lightTheme = ThemeData(
       color: textColor,
       fontWeight: FontWeight.bold,
     ),
+    bodySmall: TextStyle(
+      fontSize: 16,
+      color: textColor,
+      fontWeight: FontWeight.bold,
+    ),
     titleLarge: TextStyle(
       fontSize: 12,
       color: textColor,
