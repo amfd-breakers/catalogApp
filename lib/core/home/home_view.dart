@@ -1,11 +1,8 @@
 import 'package:catalog_app/core/home/home_view_controller.dart';
-import 'package:catalog_app/core/services/catalog_service.dart';
 import 'package:catalog_app/core/widgets/item_widget.dart';
 import 'package:catalog_app/core/widgets/my_drawar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../models/item.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,27 +12,27 @@ class HomeView extends StatelessWidget {
     return GetBuilder<HomeViewController>(
         init: HomeViewController(),
         builder: (controller) {
-          final dummyList =
-              List.generate(50, (index) => controller.myItemOfCatalog[0]);
-
           return SafeArea(
             child: Scaffold(
                 appBar: AppBar(
-                  title: Center(
-                    child: Text(
-                      "Catalog App",
-                      style: Theme.of(context).textTheme.bodyLarge,
-                      textAlign: TextAlign.center,
-                    ),
+                    title: Center(
+                  child: Text(
+                    "Catalog App",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.center,
                   ),
-                ),
+                )),
                 drawer: const MyDrawar(),
-                body: ListView.builder(
-                    padding: EdgeInsets.all(16),
-                    itemCount: dummyList.length,
-                    itemBuilder: (context, index) {
-                      return ItemWidget(item: dummyList[index]);
-                    })),
+                body: (controller.myItemOfCatalog.isNotEmpty)
+                    ? ListView.builder(
+                        padding: const EdgeInsets.all(16),
+                        itemCount: controller.myItemOfCatalog.length,
+                        itemBuilder: (context, index) {
+                          return ItemWidget(
+                              item: controller.myItemOfCatalog[index]);
+                        },
+                      )
+                    : const Center(child: CircularProgressIndicator())),
           );
         });
   }

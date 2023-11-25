@@ -8,8 +8,9 @@ class HomeViewController extends GetxController {
   List<Item> myItemOfCatalog = [];
 
   @override
-  void onInit() {
-    myItemOfCatalog = _catalogService.getItems();
+  void onInit() async {
+    myItemOfCatalog = await _catalogService.loadData();
+    update();
     super.onInit();
   }
 }
