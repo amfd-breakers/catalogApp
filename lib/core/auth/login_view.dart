@@ -1,5 +1,4 @@
 import 'package:catalog_app/core/auth/login_controller.dart';
-import 'package:catalog_app/core/utils/my_routes.dart';
 import 'package:catalog_app/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

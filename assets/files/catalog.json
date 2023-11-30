@@ -6,7 +6,7 @@
             "desc": "Apple iPhone 12th generation",
             "price": 999,
             "color": "#33505a",
-            "image": "https://d3cd3hu9wl72jo.cloudfront.net/1./preview/5/9/5902b53e_972b2f94-iPhone12-Blue-1.jpg"
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "desc": "Google Pixel phone 5th generation",
             "price": 699,
             "color": "#00ac51",
-            "image": "https://mobiles.dailypakistan.com.pk/wp-content/uploads/2022/03/Google-Pixel-5-400x400.jpg"
+            "image": "https://www.telstra.com.au/content/dam/tcom/lego/2020/plans-devices/mobiles/google-pixel-5/shared-google-pixel-5-black-05-900x1200.png"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "desc": "Apple Macbook air with apple silicon",
             "price": 1099,
             "color": "#e0bfae",
-            "image": "https://www.shophive.com/media/catalog/product/cache/d07d48d7e475c990b64f256c59439a91/m/a/macbook-air-space-gray-select-201810.jpg"
+            "image": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP825/macbookair.png"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "desc": "Sony Playstation 5th generation",
             "price": 500,
             "color": "#544ee4",
-            "image": "https://media.direct.playstation.com/is/image/psdglobal/PS5-digital-edition-console-front?$Background_Large$"
+            "image": "https://www.shophive.com/media/catalog/product/cache/3617b85921733ef3774cdbec091e1c0f/6/1/619bkvkw35l._sl1500_.jpg"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "desc": "Apple Aipods Pro 1st generation",
             "price": 200,
             "color": "#e3e4e9",
-            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1632861342000"
+            "image": "https://crdms.images.consumerreports.org/c_lfill,w_598/prod/products/cr/models/400116-wireless-portable-headphones-apple-airpods-pro-10009323.png"
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "desc": "Apple iPad Pro 2020 edition",
             "price": 799,
             "color": "#f73984",
-            "image": "https://www.simply.ca/cdn/shop/products/CAEN_2_iPad_Pro_12.9_Cellular_Space_Gray_1024x1024.jpg?v=1619561214"
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-silver-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583551131102"
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "desc": "Samsung Galaxy S21 Ultra 2021 edition",
             "price": 1299,
             "color": "#1c1c1c",
-            "image": "https://images.priceoye.pk/samsung-galaxy-s21-ultra-pakistan-priceoye-ps2pg-500x500.webp"
+            "image": "https://lh3.googleusercontent.com/qRQPjHrhRVIs-xnfNSyiPXOH2vH97ylMacgbTKebqJtRfNH3LlYo8pN-5igsLDWUH62tGl5zNpTsl5xd8SprzGmXoCEmWFOi2-2cQVGS-r3PaRXHt62DmJHq-jrYX0UQvWZ9BA=s800-c"
         },
         {
             "id": 8,
@@ -62,11 +62,7 @@
             "desc": "Samsung Galaxy S21 2021 edition",
             "price": 899,
             "color": "#7c95eb",
-            "image": "https://images.priceoye.pk/samsung-galaxy-s21-pakistan-priceoye-65ilo-500x500.webp"
+            "image": "https://images.samsung.com/is/image/samsung/p6pim/za/galaxy-s21/gallery/za-clear-cover-galaxy-s21-5g-ef-qg991ttegww-363168624?$720_576_PNG$"
         }
-
-
-
-        
     ]
 }

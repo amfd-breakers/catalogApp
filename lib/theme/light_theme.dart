@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Color primaryColor = Colors.deepPurple;
+
 Color scafoldColor = Colors.white;
 Color textColor = Colors.black;
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  fontFamily: GoogleFonts.lato().fontFamily,
+  fontFamily: GoogleFonts.poppins().fontFamily,
   appBarTheme: AppBarTheme(
     iconTheme: IconThemeData(color: textColor),
     color: scafoldColor,

@@ -1,6 +1,6 @@
 import 'package:catalog_app/core/home/home_view_controller.dart';
-import 'package:catalog_app/core/widgets/item_widget.dart';
-import 'package:catalog_app/core/widgets/my_drawar.dart';
+import 'package:catalog_app/core/home/header.dart';
+import 'package:catalog_app/core/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,27 +12,30 @@ class HomeView extends StatelessWidget {
     return GetBuilder<HomeViewController>(
         init: HomeViewController(),
         builder: (controller) {
-          return SafeArea(
-            child: Scaffold(
-                appBar: AppBar(
-                    title: Center(
-                  child: Text(
-                    "Catalog App",
-                    style: Theme.of(context).textTheme.bodyLarge,
-                    textAlign: TextAlign.center,
-                  ),
-                )),
-                drawer: const MyDrawar(),
-                body: (controller.myItemOfCatalog.isNotEmpty)
-                    ? ListView.builder(
-                        padding: const EdgeInsets.all(16),
-                        itemCount: controller.myItemOfCatalog.length,
-                        itemBuilder: (context, index) {
-                          return ItemWidget(
-                              item: controller.myItemOfCatalog[index]);
-                        },
-                      )
-                    : const Center(child: CircularProgressIndicator())),
+          return Scaffold(
+            backgroundColor: Color(0xfff5f5f5),
+            body: SafeArea(
+              child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  child: Column(
+                    children: [
+                      Header(),
+                      (controller.myItemOfCatalog.isNotEmpty)
+                          ? Expanded(
+                              child: ListView.builder(
+                                  itemCount: controller.myItemOfCatalog.length,
+                                  itemBuilder: (context, index) {
+                                    return CardWidget(
+                                        item:
+                                            controller.myItemOfCatalog[index]);
+                                  }))
+                          : const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                    ],
+                  )),
+            ),
           );
         });
   }
