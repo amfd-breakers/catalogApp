@@ -17,11 +17,11 @@ class HomeView extends StatelessWidget {
         init: HomeViewController(),
         builder: (controller) {
           return Scaffold(
-            backgroundColor: const Color(0xfff5f5f5),
+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
             body: SafeArea(
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
                 child: Column(
                   children: [
                     const Header(),
@@ -51,6 +51,12 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Get.toNamed(MyRoutes.cartRout);
+              },
+              child: const Icon(Icons.shopping_cart_checkout),
             ),
           );
         });

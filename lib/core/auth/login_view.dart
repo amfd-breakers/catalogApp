@@ -14,7 +14,7 @@ class LoginView extends StatelessWidget {
         builder: (controller) {
           return SafeArea(
             child: Scaffold(
-              backgroundColor: Colors.white,
+              backgroundColor: Theme.of(context).cardColor,
               body: Padding(
                 padding: const EdgeInsets.all(20),
                 child: ListView(
@@ -24,9 +24,10 @@ class LoginView extends StatelessWidget {
                     ),
                     Obx(() {
                       return Text(
-                        "Welcom ${controller.name} ",
-                        style: GoogleFonts.aboreto(
-                          color: Colors.black,
+                        "Wellcome ${controller.name} ",
+                        style: GoogleFonts.aBeeZee(
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.bold,
                           fontSize: 30,
                         ),
                         textAlign: TextAlign.center,
@@ -41,9 +42,10 @@ class LoginView extends StatelessWidget {
                               if (value == null || value.isEmpty) {
                                 return " name is required";
                               }
+                              return null;
                             },
                             controller: controller.nameController,
-                            decoration: const InputDecoration(
+                            decoration:const InputDecoration(
                               hintText: " name",
                               label: Text(
                                 "Enter name",
@@ -64,8 +66,9 @@ class LoginView extends StatelessWidget {
                               if (value.length < 6) {
                                 return "Password should be atleast 6 characters";
                               }
+                              return null;
                             },
-                            decoration: const InputDecoration(
+                            decoration:const InputDecoration(
                               hintText: "Password",
                               label: Text(
                                 "Enter Password",

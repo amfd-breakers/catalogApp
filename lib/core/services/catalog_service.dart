@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 class CatalogService {
   Future<List<Item>> loadData() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     String stringMainData =
         await rootBundle.loadString("assets/files/catalog.json");
     Map<String, dynamic> decodedData = jsonDecode(stringMainData);

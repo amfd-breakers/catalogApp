@@ -1,64 +1,66 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = Colors.black;
-Color textColor = Colors.white;
+Color creamColor = const Color(0xfff5f5f5);
+Color bluishColor = const Color(0xfff403b58);
+Color scafoldColor = Color(0xfff403b58);
+Color textColor = Colors.black;
 ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
-  scaffoldBackgroundColor: primaryColor,
-  appBarTheme: const AppBarTheme(
-    elevation: 0,
-    toolbarHeight: 60,
+  inputDecorationTheme: const InputDecorationTheme(
+    errorStyle: TextStyle(color: Colors.red),
+    labelStyle: TextStyle(color: Colors.white),
+    hintStyle: TextStyle(
+      color: Colors.white,
+    ),
   ),
-
+  brightness: Brightness.dark,
+  cardColor: textColor,
+  primaryColor: Colors.white,
+  fontFamily: GoogleFonts.poppins().fontFamily,
+  appBarTheme: AppBarTheme(
+    iconTheme: IconThemeData(color: Colors.white),
+    color: scafoldColor,
+    elevation: 0.0,
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      foregroundColor: Colors.black,
-      backgroundColor: Colors.white,
+      foregroundColor: textColor,
+      backgroundColor: Color(0xfff403b58),
       padding: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(30),
       ),
     ),
   ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: bluishColor,
+    foregroundColor: Colors.white,
+  ),
   textTheme: TextTheme(
     bodyLarge: TextStyle(
-      fontSize: 30,
-      fontWeight: FontWeight.bold,
+      fontSize: 20,
       color: textColor,
+      fontWeight: FontWeight.bold,
     ),
     bodyMedium: TextStyle(
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
+      fontSize: 18,
       color: textColor,
+      fontWeight: FontWeight.bold,
     ),
     bodySmall: TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
+      fontSize: 16,
       color: textColor,
+      fontWeight: FontWeight.bold,
     ),
     titleLarge: TextStyle(
-      fontSize: 17,
-      fontWeight: FontWeight.bold,
+      fontSize: 12,
       color: textColor,
-    ),
-    titleMedium: TextStyle(
-      fontSize: 15,
       fontWeight: FontWeight.bold,
-      color: textColor,
     ),
     titleSmall: TextStyle(
-      fontSize: 10,
-      fontWeight: FontWeight.bold,
+      fontSize: 8,
       color: textColor,
+      fontWeight: FontWeight.bold,
     ),
   ),
-  // switchTheme: SwitchThemeData(
-  // //   thumbColor: MaterialStateProperty.all(Colors.black),
-  // //   trackColor: MaterialStateProperty.all(Colors.white),
-  // // ),
-
-  // inputDecorationTheme: const InputDecorationTheme(
-  //   border: OutlineInputBorder(borderRadius: BorderRadius.vertical())
-
-  // )
 );

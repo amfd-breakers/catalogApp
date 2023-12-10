@@ -1,4 +1,5 @@
 import 'package:catalog_app/core/auth/login_view.dart';
+import 'package:catalog_app/core/detail/cart_view.dart';
 import 'package:catalog_app/core/home/home_view.dart';
 import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:catalog_app/theme/light_theme.dart';
@@ -16,13 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: const HomeView(),
-      themeMode: ThemeMode.light,
+      home: const LoginView(),
+      themeMode: ThemeMode.system,
       theme: lightTheme,
       darkTheme: darkTheme,
       routes: {
         MyRoutes.loginRout: (context) => const LoginView(),
-        MyRoutes.homeRout: (context) => const HomeView()
+        MyRoutes.homeRout: (context) => const HomeView(),
+        MyRoutes.cartRout: (context) => const CartView()
       },
     );
   }

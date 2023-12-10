@@ -1,3 +1,4 @@
+import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -6,28 +7,26 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(50),
+      alignment: Alignment.topLeft,
+      width: double.infinity,
+      padding: const EdgeInsets.only(top: 40, bottom: 40),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
             "Catalog App",
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: const Color(0xfff493b58),
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor,
                 fontStyle: FontStyle.italic),
           ),
           Text(
             "Trending Products",
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: const Color.fromARGB(
-                  255,
-                  127,
-                  116,
-                  116,
-                ),
-                fontStyle: FontStyle.italic),
+                fontStyle: FontStyle.italic,
+                color: Theme.of(context).primaryColor),
           ),
         ],
       ),

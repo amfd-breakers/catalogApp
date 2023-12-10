@@ -1,4 +1,4 @@
-import 'package:catalog_app/core/utils/my_routes.dart';
+import 'package:catalog_app/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 
 import '../models/item.dart';
@@ -17,7 +17,8 @@ class CardWidget extends StatelessWidget {
         height: 150,
         width: 150,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(20)),
         child: Row(
           children: [
             Container(
@@ -25,7 +26,7 @@ class CardWidget extends StatelessWidget {
                 5,
               ),
               decoration: BoxDecoration(
-                color: MyRoutes.creamColor,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
@@ -53,27 +54,28 @@ class CardWidget extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .bodyLarge
-                        ?.copyWith(color: MyRoutes.bluishColor),
+                        ?.copyWith(color: Theme.of(context).primaryColor),
                   ),
                   Text(
                     item.desc,
-                    style: Theme.of(context).textTheme.labelLarge,
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelMedium
+                        ?.copyWith(fontWeight: FontWeight.normal),
                   ),
                   ButtonBar(
                     alignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "\$${item.price}".toString(),
-                        style: TextStyle(
-                            color: MyRoutes.bluishColor,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      Text("\$${item.price}".toString(),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
+                              ?.copyWith(
+                                  color: Theme.of(context).primaryColor)),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: MyRoutes.bluishColor),
                         onPressed: () {},
                         child: Text(
-                          "Press",
+                          "Add to cart",
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall
