@@ -86,9 +86,9 @@ class DetailView extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(120, 50),
-                    shape: const StadiumBorder(),
-                    backgroundColor: MyRoutes.bluishColor),
+                  minimumSize: const Size(120, 50),
+                  shape: const StadiumBorder(),
+                ),
                 onPressed: () {},
                 child: Text(
                   "Add to cart",

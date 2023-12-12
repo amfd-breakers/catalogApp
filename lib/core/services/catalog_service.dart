@@ -4,6 +4,7 @@ import 'package:catalog_app/core/models/item.dart';
 import 'package:flutter/services.dart';
 
 class CatalogService {
+ static List<Item> list=[];
   Future<List<Item>> loadData() async {
     await Future.delayed(const Duration(seconds: 3));
     String stringMainData =
@@ -15,4 +16,7 @@ class CatalogService {
 
     return list;
   }
+   
+
+
 }

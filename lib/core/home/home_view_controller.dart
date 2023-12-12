@@ -13,4 +13,11 @@ class HomeViewController extends GetxController {
     update();
     super.onInit();
   }
+
+  Item getById(int id) => myItemOfCatalog.firstWhere(
+        (element) => element.id == id,
+      );
+  Item getByPosition(int pos) {
+    return myItemOfCatalog[pos];
+  }
 }
