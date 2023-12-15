@@ -1,11 +1,11 @@
 import 'package:catalog_app/core/auth/login_view.dart';
-import 'package:catalog_app/core/detail/cart_view.dart';
 import 'package:catalog_app/core/home/home_view.dart';
 import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:catalog_app/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/home/cart_view.dart';
 import 'core/utils/my_routes.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: const HomeView(),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
       routes: {

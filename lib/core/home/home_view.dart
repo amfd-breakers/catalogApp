@@ -30,13 +30,12 @@ class HomeView extends StatelessWidget {
                             child: ListView.builder(
                               itemCount: controller.myItemOfCatalog.length,
                               itemBuilder: (context, index) {
-                                Item item = controller.getByPosition(index);
+                                Item item = controller.myItemOfCatalog[index];
 
                                 return InkWell(
                                   onTap: () {
                                     Get.to(
-                                      () => DetailView(
-                                          item: controller.getById(2)),
+                                      () => DetailView(item: item),
                                     );
                                   },
                                   child: CardWidget(

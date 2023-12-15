@@ -16,7 +16,7 @@ ThemeData lightTheme = ThemeData(
   ),
   brightness: Brightness.light,
   cardColor: cardColor,
-  primaryColor: Color(0xfff403b58),
+  primaryColor: Color.fromARGB(255, 74, 69, 99),
   fontFamily: GoogleFonts.poppins().fontFamily,
   appBarTheme: AppBarTheme(
     iconTheme: IconThemeData(color: Colors.black),

@@ -6,6 +6,7 @@ import '../models/item.dart';
 class HomeViewController extends GetxController {
   final CatalogService _catalogService = CatalogService();
   List<Item> myItemOfCatalog = [];
+  RxBool isAdded = false.obs;
 
   @override
   void onInit() async {

@@ -24,6 +24,7 @@ ThemeData darkTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      textStyle: TextStyle(color: Colors.white),
       foregroundColor: Colors.white,
       backgroundColor: Color(0xfff403b58),
       padding: const EdgeInsets.all(10),
