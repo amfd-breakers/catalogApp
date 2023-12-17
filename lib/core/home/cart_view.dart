@@ -1,4 +1,4 @@
-import 'package:catalog_app/core/home/cart_controller.dart';
+import 'package:catalog_app/core/home/home_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,8 +9,8 @@ class CartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CartController>(
-        init: CartController(),
+    return GetBuilder<HomeViewController>(
+        init: HomeViewController(),
         builder: (controller) {
           return Scaffold(
             backgroundColor: Theme.of(context).cardColor,
@@ -26,26 +26,30 @@ class CartView extends StatelessWidget {
                 ),
               ),
             ),
-            body: Column(
+            body: ListView(
               children: [
                 ListView.builder(
                   shrinkWrap: true,
                   itemCount: controller.items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      leading: Icon(Icons.done),
+                      leading: const Icon(Icons.done),
                       title: Text(controller.items[index].name),
                       trailing: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
+                        onPressed: () {
+                          controller.remove(controller.items[index]);
+                        },
+                        icon: const Icon(
                           Icons.remove_circle_outline,
                         ),
                       ),
                     );
                   },
                 ),
-                Divider(),
-                TotalCart(),
+                const Divider(),
+                TotalCart(
+                  price: controller.totalPrice,
+                ),
               ],
             ),
           );

@@ -16,16 +16,16 @@ ThemeData lightTheme = ThemeData(
   ),
   brightness: Brightness.light,
   cardColor: cardColor,
-  primaryColor: Color.fromARGB(255, 74, 69, 99),
+  primaryColor: const Color.fromARGB(255, 74, 69, 99),
   fontFamily: GoogleFonts.poppins().fontFamily,
   appBarTheme: AppBarTheme(
-    iconTheme: IconThemeData(color: Colors.black),
+    iconTheme: const IconThemeData(color: Colors.black),
     color: scafoldColor,
     elevation: 0.0,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      textStyle: TextStyle(color: Colors.white),
+      textStyle: const TextStyle(color: Colors.white),
       foregroundColor: Colors.white,
       backgroundColor: Color(0xfff403b58),
       padding: const EdgeInsets.all(10),

@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 class MyRoutes {
   static String homeRout = "/home";

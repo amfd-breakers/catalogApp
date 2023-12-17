@@ -1,4 +1,4 @@
-import 'package:catalog_app/core/utils/my_routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/item.dart';
@@ -90,13 +90,11 @@ class DetailView extends StatelessWidget {
                   shape: const StadiumBorder(),
                 ),
                 onPressed: () {},
-                child: Text(
-                  "Add to cart",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall
-                      ?.copyWith(color: Colors.white, fontSize: 16),
-                ),
+                child: item.isAdded
+                    ? const Icon(Icons.done)
+                    : const Icon(
+                        (CupertinoIcons.cart_badge_plus),
+                      ),
               ),
             ],
           ),

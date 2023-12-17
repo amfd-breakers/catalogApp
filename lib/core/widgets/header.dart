@@ -1,4 +1,3 @@
-import 'package:catalog_app/theme/dark_theme.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {

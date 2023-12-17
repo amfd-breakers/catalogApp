@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Color creamColor = const Color(0xfff5f5f5);
 Color bluishColor = const Color(0xfff403b58);
-Color scafoldColor = Color(0xfff403b58);
+Color scafoldColor = const Color(0xfff403b58);
 Color textColor = Colors.black;
 ThemeData darkTheme = ThemeData(
   inputDecorationTheme: const InputDecorationTheme(
@@ -18,13 +18,13 @@ ThemeData darkTheme = ThemeData(
   primaryColor: Colors.white,
   fontFamily: GoogleFonts.poppins().fontFamily,
   appBarTheme: AppBarTheme(
-    iconTheme: IconThemeData(color: Colors.white),
+    iconTheme: const IconThemeData(color: Colors.white),
     color: scafoldColor,
     elevation: 0.0,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      textStyle: TextStyle(color: Colors.white),
+      textStyle: const TextStyle(color: Colors.white),
       foregroundColor: Colors.white,
       backgroundColor: Color(0xfff403b58),
       padding: const EdgeInsets.all(10),

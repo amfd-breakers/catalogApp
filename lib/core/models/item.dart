@@ -1,30 +1,27 @@
-
 class Item {
-
-  
   final int id;
   final String name;
   final String desc;
   final num price;
   final String color;
   final String image;
+  bool isAdded;
 
-  
-
-  Item({
+  Item( {
     required this.id,
+    this.isAdded = false,
     required this.name,
     required this.desc,
     required this.price,
     required this.color,
     required this.image,
-    
 
   });
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
         color: map["color"],
+        isAdded: map["isAdded"]?? false,
         name: map["name"],
         price: map["price"],
         id: map["id"],
@@ -38,5 +35,6 @@ class Item {
         "desc": id,
         "image": id,
         "price": id,
+        "isAdded":isAdded
       };
 }
