@@ -45,7 +45,7 @@ class LoginView extends StatelessWidget {
                               return null;
                             },
                             controller: controller.nameController,
-                            decoration:const InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: " name",
                               label: Text(
                                 "Enter name",
@@ -68,7 +68,7 @@ class LoginView extends StatelessWidget {
                               }
                               return null;
                             },
-                            decoration:const InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: "Password",
                               label: Text(
                                 "Enter Password",

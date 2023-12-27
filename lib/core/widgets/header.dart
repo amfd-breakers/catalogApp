@@ -16,16 +16,17 @@ class Header extends StatelessWidget {
           Text(
             "Catalog App",
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).primaryColor,
-                fontStyle: FontStyle.italic),
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).primaryColor,
+                ),
           ),
           Text(
             "Trending Products",
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                fontStyle: FontStyle.italic,
-                color: Theme.of(context).primaryColor),
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(color: Theme.of(context).primaryColor),
           ),
         ],
       ),

@@ -14,7 +14,7 @@ class TotalCart extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
-          price.toString(),
+          "\$$price",
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 color: Theme.of(context).primaryColor,
                 fontSize: 40,
@@ -22,10 +22,12 @@ class TotalCart extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Get.showSnackbar(const GetSnackBar(
-              duration: Duration(seconds: 2),
-              message: "can not by et",
-            ));
+            Get.showSnackbar(
+              const GetSnackBar(
+                duration: Duration(seconds: 2),
+                message: "can not by yet",
+              ),
+            );
           },
           style: ElevatedButton.styleFrom(
             minimumSize: const Size(130, 30),
